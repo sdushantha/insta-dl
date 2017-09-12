@@ -6,7 +6,7 @@ git clone https://github.com/sdushantha/insta-dl.git
  ```
 ## Usage
 ```
-python insta.py -u example-username 
+python insta.py -u <username> 
 ```
 ## Known Issues
 * The program sometimes stops/freezes if there are vieos in the Instagram user´s profile. <---- unsure if that accurate
