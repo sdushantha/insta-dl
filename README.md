@@ -14,3 +14,8 @@ python insta-dl.py -u <username>
  
 ## TODO
 - [ ] Download images from many users by haveing a list of usernames in a text file
+
+## Contributing
+
+* Check any open issues or open a new issue to start discussions about your ideas of features and/or bugs
+* Fork the repository, make changes, and send pull requests
