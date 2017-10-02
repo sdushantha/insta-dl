@@ -1,4 +1,4 @@
-# ![rsz_11rsz_1rsz_insta-dl](https://user-images.githubusercontent.com/27065646/31065696-b17e42d8-a747-11e7-9b09-69889dad60fd.png)insta-dl
+# ![image](https://user-images.githubusercontent.com/27065646/31065811-6dd88f9c-a748-11e7-9d57-2e0ae062f413.jpg)insta-dl
 Download Instagram images as a bulk from any user who is **public**. This only works on python2 beacuse it uses the urllib2 module
 ## Installation
 ```batch
