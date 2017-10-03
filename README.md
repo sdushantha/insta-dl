@@ -14,6 +14,9 @@ python insta-dl.py -u <username>
  
 ## TODO
 - [ ] Download images from many users by haveing a list of usernames in a text file
+- [ ] Add colors to error texts
+- [ ] Rewrite this in Python 3
+- [ ] Fix issue where it only downloads up to 20 images
 
 ## Contributing
 
