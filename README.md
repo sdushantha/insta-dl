@@ -1,5 +1,5 @@
 # ![image](https://user-images.githubusercontent.com/27065646/31065811-6dd88f9c-a748-11e7-9d57-2e0ae062f413.jpg) insta-dl
-Download Instagram images as a bulk from any user who is **public**. This only works on python2 beacuse it uses the urllib2 module. But I am planning to rewrite this program in python3 and also fix the issue where the program only downloads up to 20 images.
+Download Instagram images as a bulk from any user who is **public**. This only works on python2 beacuse it uses the urllib2 module. But I am planning to fix the issue where the program only downloads up to 20 images.
 ## Installation
 ```batch
 git clone https://github.com/sdushantha/insta-dl.git
@@ -15,7 +15,7 @@ python insta-dl.py -u <username>
 ## TODO
 - [ ] Download images from many users by haveing a list of usernames in a text file
 - [x] Add colors to error texts
-- [ ] Rewrite this in Python 3
+- [x] Rewrite this in Python 3
 - [ ] Fix issue where it only downloads up to 20 images
 
 ## Contributing
