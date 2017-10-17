@@ -1,28 +1,33 @@
 try:
-	import urllib2, urllib, argparse
-	from json import load
+	import requests, argparse
+	import urllib.request
 	from os import makedirs
 except ImportError:
-	print("\033[91mPython 3 not supported!\033[0m")
-	exit()
+	print("\033[91mYou need the module requests to run this!\033[0m")
 
 def download_images():
 	request_url = "https://www.instagram.com/"+args.username+"/media/"
 
+	headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0'
+}
+
+	r = requests.get(request_url, headers=headers)
+	
 	try:
-		json_obj = urllib2.urlopen(request_url)
+		data = r.json()
 	except:
 		print("\033[91mInvalid username!\033[0m")
-
-	data = load(json_obj)
+		exit()
 	make_folder()
+	
 	for content in data["items"]:
 		file_url = content["images"]["standard_resolution"]["url"]
 		
 		file_name = file_url.split("/")[-1]
 		
 		path = args.username+"/"+file_name
-		urllib.urlretrieve(file_url,path)
+		urllib.request.urlretrieve(file_url,path)
 		print("Downloaded: "+path)
 
 def make_folder():
@@ -36,4 +41,5 @@ def make_folder():
 parser = argparse.ArgumentParser(description='Instagram Image Downloader')
 parser.add_argument('-u', '--username', type=str, metavar='', required=True, help='The username of the the instagram account')
 args = parser.parse_args()
+
 download_images()
