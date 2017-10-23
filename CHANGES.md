@@ -1,5 +1,8 @@
 # Changelog
 ### Version 0.2.0 - 2017-17-10
+* Added GUI
+
+### Version 0.2.0 - 2017-17-10
 * Rewrote the whole script in Python 3
 * Now it uses the requests module
 
