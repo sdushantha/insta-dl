@@ -1,5 +1,5 @@
 # Changelog
-### Version 0.2.0 - 2017-17-10
+### Version 0.2.0 - 2017-23-10
 * Added GUI
 
 ### Version 0.2.0 - 2017-17-10
