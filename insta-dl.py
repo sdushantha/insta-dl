@@ -1,13 +1,12 @@
 try:
-	import requests, argparse
-	import urllib.request
-	from os import makedirs
+        from tkinter.ttk import *
+        import requests, argparse, urllib.request, os, tkinter
 except ImportError:
-	print("\033[91mYou need the module requests to run this!\033[0m")
-
-def download_images():
-	request_url = "https://www.instagram.com/"+args.username+"/media/"
-
+	print("You need the module requests to run this!")
+	
+def download_images(username):
+	request_url = "https://www.instagram.com/"+username+"/media/"
+	
 	headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0'
 }
@@ -17,29 +16,50 @@ def download_images():
 	try:
 		data = r.json()
 	except:
-		print("\033[91mInvalid username!\033[0m")
+		print("Invalid username!")
 		exit()
-	make_folder()
-	
+	make_folder(entry.get())
+
+	num=10
 	for content in data["items"]:
 		file_url = content["images"]["standard_resolution"]["url"]
-		
+		file_url = file_url.replace("s640x640","s1080x1080")
+ 
 		file_name = file_url.split("/")[-1]
 		
-		path = args.username+"/"+file_name
+		path = entry.get()+"/"+file_name
 		urllib.request.urlretrieve(file_url,path)
 		print("Downloaded: "+path)
 
-def make_folder():
+def action():
+        download_images(entry.get())
+        
+#Make folder wiht user's username
+def make_folder(username):
 
 	try:
-		mkdir = makedirs(args.username)
+		mkdir = os.makedirs(username)
 	except OSError:
-		print("\033[91mFolder with that username already exists!\033[0m")
+		print("Folder with that username already exists!")
 		exit()
 
-parser = argparse.ArgumentParser(description='Instagram Image Downloader')
-parser.add_argument('-u', '--username', type=str, metavar='', required=True, help='The username of the the instagram account')
-args = parser.parse_args()
+#Biulding the UI		
+window = tkinter.Tk()
+window.configure(background="grey90")
+window.title("insta-dl")
+window.geometry("300x200")
+window.resizable(False, False)
 
-download_images()
+entry = tkinter.Entry(window)
+entry.place(x=70,y=68)
+entry.configure(highlightbackground="grey90")
+
+button = tkinter.Button(window, text="Download")
+button.place(x=110,y=120)
+button.configure(command=lambda:action(),highlightbackground="grey90")
+
+notice = tkinter.Label(window, text="insta-dl is not affiliated with Instagram",
+                       fg="grey60",bg="grey90")
+notice.place(x=30, y=180)
+
+window.mainloop()
