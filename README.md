@@ -9,10 +9,6 @@ The module requests is needed for this program to work.
 ```batch
 pip3 install requests
 ```
-## Usage
-```batch
-python insta-dl.py -u <username> 
-```
 ## Known Issues
 * Only downloads upto 20 images. It is because Instagram has done something which only lets you download 20 images.
  
