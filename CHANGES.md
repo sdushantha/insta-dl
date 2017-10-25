@@ -2,6 +2,7 @@
 ### Version 0.2.2 - 2017-24-10
 * Added option to download videos as well
 * Fixed issue where insta-dl would only download up to 20 images
+* Added option to download videos as wel
 
 ### Version 0.2.1 - 2017-23-10
 * Added GUI
