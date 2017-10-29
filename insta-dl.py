@@ -1,8 +1,9 @@
 try:
-        from tkinter.ttk import *
+        from time import sleep
         import requests, argparse, urllib.request, os, tkinter
 except ImportError:
 	print("You need the module requests to run this!")
+	exit()####add this
 
 window = tkinter.Tk()
 
@@ -45,6 +46,8 @@ def download_images(username):
 			if not os.path.isfile(path):
 				urllib.request.urlretrieve(file_url,path)
 				print("Downloaded: "+path)
+				sleep(0.5)
+		print("--------------Completed--------------")		
 				
 		more_available = data["more_available"]
 		
