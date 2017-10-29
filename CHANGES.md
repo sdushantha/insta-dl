@@ -1,8 +1,13 @@
 # Changelog
+### Version 0.2.3 - 2017-29-10
+* Added a pause of 0.5 seconds after each download so Instagram does not temporaly block your IP due to the many requests
+* Prints out "completed" after downloading all images from an user
+* Removed one line of code which did nothing
+
 ### Version 0.2.2 - 2017-24-10
 * Added option to download videos as well
 * Fixed issue where insta-dl would only download up to 20 images
-* Added option to download videos as wel
+* Added option to download videos as well
 
 ### Version 0.2.1 - 2017-23-10
 * Added GUI
