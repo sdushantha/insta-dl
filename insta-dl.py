@@ -3,7 +3,7 @@ try:
         import requests, argparse, urllib.request, os, tkinter
 except ImportError:
 	print("You need the module requests to run this!")
-	exit()####add this
+	exit()
 
 window = tkinter.Tk()
 
