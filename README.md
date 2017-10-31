@@ -13,12 +13,6 @@ The module requests is needed for this program to work.
 pip3 install requests
 ```
 
-## TODO
-- [ ] Download images from many users by haveing a list of usernames in a text file
-- [x] Add colors to error texts
-- [x] Rewrite this in Python 3
-- [x] Fix issue where it only downloads up to 20 images
-
 ## Contributing
 * Check any open issues or open a new issue to start discussions about your ideas of features and/or bugs
 * Fork the repository, make changes, and send pull requests
