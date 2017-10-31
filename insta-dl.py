@@ -1,10 +1,6 @@
-try:
-        from time import sleep
-        import requests, argparse, urllib.request, os, tkinter
-except ImportError:
-	print("You need the module requests to run this!")
-	exit()
-
+from time import sleep
+import requests, argparse, urllib.request, os, tkinter
+	
 window = tkinter.Tk()
 
 do_download_videos = tkinter.IntVar(value=0)
@@ -30,7 +26,7 @@ def download_images(username):
 		except:
 			print("Invalid username!")
 			os.removedirs(entry.get())
-			exit()
+			break;
 		
 		for content in data["items"]:
 			if content["type"] == "video" and do_download_videos.get() == 1:
@@ -44,10 +40,12 @@ def download_images(username):
 			
 			path = entry.get()+"/"+username+"_"+file_name
 			if not os.path.isfile(path):
-				urllib.request.urlretrieve(file_url,path)
-				print("Downloaded: "+path)
-				sleep(0.5)
-		print("--------------Completed--------------")		
+                                try:
+                                        urllib.request.urlretrieve(file_url,path)
+                                        print("Downloaded: "+path)
+                                        sleep(0.5)
+                                except:
+                                        print("----Skipping this image----")
 				
 		more_available = data["more_available"]
 		
@@ -57,22 +55,21 @@ def download_images(username):
 		
 		if more_available:
 			print("Getting next page of images with maximum id: "+new_max_id)
-
+		print("--------------Completed--------------")
 def action():
         download_images(entry.get())
         
 #Make folder with given username
 def make_folder(username):
-
-	try:
-		mkdir = os.makedirs(username)
-	except OSError:
-		print("Folder with that username already exists!")
-		exit()
+        try:
+                os.makedirs(username)
+        except OSError:
+                os.removedirs(username)
+                os.makedirs(username)
 
 #Building the UI		
 window.configure(background="grey90")
-window.title("insta-dl")
+window.title("insta-dl v.0.2.4")
 window.geometry("300x200")
 window.resizable(False, False)
 
