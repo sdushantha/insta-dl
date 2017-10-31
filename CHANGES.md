@@ -1,4 +1,8 @@
 # Changelog
+### Version 0.2.4 - 2017-31-10
+* Fixed a strange issue where the program would crash if the downloaded data is less than the expected amount
+* Added version number on top with the title
+
 ### Version 0.2.3 - 2017-29-10
 * Added a pause of 0.5 seconds after each download so Instagram does not temporaly block your IP due to the many requests
 * Prints out "completed" after downloading all images from an user
