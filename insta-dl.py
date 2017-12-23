@@ -30,12 +30,11 @@ def download_images(username):
       break;
     
     for node in data["user"]["media"]["nodes"]:
-      src = node
       # Cant access video url anymore
       # if src["is_video"] and do_download_videos.get() == 1:
       #   file_url = src["videos"]["standard_resolution"]["url"]
       # else:
-      file_url = src["display_src"]
+      file_url = node["display_src"]
       file_url = file_url.replace("s640x640","s1080x1080")
       file_name = file_url.split("/")[-1]
       
