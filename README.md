@@ -9,6 +9,12 @@ I would like to say a big thanks to [TripleFrequency](https://github.com/TripleF
 git clone https://github.com/sdushantha/insta-dl.git
  ```
 
+## Requirements
+The module requests is needed for this program to work.
+```bash
+pip3 install requests
+```
+
 ## Contributing
 * Check any open issues or open a new issue to start discussions about your ideas of features and/or bugs
 * Fork the repository, make changes, and send pull requests
