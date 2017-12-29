@@ -45,7 +45,7 @@ def download_images(username):
       path = entry.get() + "/" + username + "_" + file_name
       if not os.path.isfile(path):
         try:
-          urllib.urlretrieve(file_url, path)
+          urllib.request.urlretrieve(file_url, path)
           print("Downloaded: "+path)
           sleep(0.5)
         except:
