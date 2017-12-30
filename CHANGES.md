@@ -1,4 +1,10 @@
 # Changelog
+
+### Version 0.2.5 - 2017-23-12
+* Fix for new JSON source
+* Fix for new way to get next page
+* Use python 2.7 and python 3 compatible libraries
+
 ### Version 0.2.4 - 2017-31-10
 * Fixed a strange issue where the program would crash if the downloaded data is less than the expected amount
 * Added version number on top with the title
