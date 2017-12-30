@@ -1,9 +1,11 @@
 # Changelog
 
-### Version 0.2.5 - 2017-23-12
+### Version 0.2.5 - 2017-30-12
 * Fix for new JSON source
 * Fix for new way to get next page
 * Use python 2.7 and python 3 compatible libraries
+* Added color to output text
+* Removed video download option
 
 ### Version 0.2.4 - 2017-31-10
 * Fixed a strange issue where the program would crash if the downloaded data is less than the expected amount
