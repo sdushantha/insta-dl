@@ -10,7 +10,7 @@ git clone https://github.com/sdushantha/insta-dl.git
 ## Requirements
 The module requests is needed for this program to work.
 ```bash
-pip3 install requests
+pip install requests
 ```
 ## Contributors
 |     Name      |     GitHub    |
