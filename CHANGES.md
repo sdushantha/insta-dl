@@ -1,5 +1,8 @@
 # Changelog
 
+### Version 0.2.6 - 2018-03-01
+* Added feature to download a single post
+
 ### Version 0.2.5 - 2017-30-12
 * Fix for new JSON source
 * Fix for new way to get next page
@@ -31,5 +34,5 @@
 ### Version 0.1.1 - 2017-10-10
 * Added color to text
 
-### Version 0.1.0 - 2017-10-9
+### Version 0.1.0 - 2017-10-09
 * Initial release
