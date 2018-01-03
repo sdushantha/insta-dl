@@ -41,8 +41,17 @@ def download_single(url):
     except:
         pass
     
-    urllib.request.urlretrieve(file_url, path)
-    print("Downloaded: " + path)
+    try:
+      urllib.request.urlretrieve(file_url, path)
+      print("Downloaded: "+path)
+
+    except:
+      try:
+          urllib.urlretrieve(file_url, path)
+          print("Downloaded: "+path)
+
+      except:
+          print("\033[91mUnknown error occurred!\033[0m")
 
 
 def download_bulk(username):
@@ -88,9 +97,15 @@ def download_bulk(username):
           urllib.request.urlretrieve(file_url, path)
           print("Downloaded: "+path)
           sleep(0.5)
-        
+
         except:
-          print("\033[91m----Skipping this image----\033[0m")
+          try:
+              urllib.urlretrieve(file_url, path)
+              print("Downloaded: "+path)
+              sleep(0.5)
+
+          except:
+              print("\033[91m----Skipping this image----\033[0m")
 
     more_available = data["user"]["media"]["page_info"]["has_next_page"]
 
