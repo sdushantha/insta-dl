@@ -1,5 +1,9 @@
 from time import sleep
-import requests, urllib, os, json, urllib.request
+import requests
+import urllib
+import os
+import json
+import urllib.request
 try:
   import tkinter
 except ImportError:
