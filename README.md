@@ -2,6 +2,10 @@
 
 Download Instagram images as a bulk from any user who is **public**.
 
+
+If you are running insta-dl with python2.7 and get some error please let me know. I have issues with my computer so I cant test out insta-dl with python2.7. 
+
+
 ## Installation
 ```bash
 git clone https://github.com/sdushantha/insta-dl.git
