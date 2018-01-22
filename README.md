@@ -8,13 +8,13 @@ If you are running insta-dl with python2.7 and get some error please let me know
 
 ## Installation
 ```bash
-git clone https://github.com/sdushantha/insta-dl.git
+$ git clone https://github.com/sdushantha/insta-dl.git
  ```
 
 ## Requirements
 The module requests is needed for this program to work.
 ```bash
-pip install requests
+$ pip install requests
 ```
 ## Contributors
 |     Name      |     GitHub    |
