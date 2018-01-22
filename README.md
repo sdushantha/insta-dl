@@ -3,7 +3,8 @@
 Download Instagram images as a bulk from any user who is **public**.
 
 
-If you are running insta-dl with python2.7 and get some error please let me know. I have issues with my computer so I cant test out insta-dl with python2.7. 
+USE A VPN WHILE DOWNLOADING OR ELSE **NOT ALL** OF THE IMAGES WILL DOWNLOAD.                                                   
+RECOMENDED VPN ---> [Windscribe](https://windscribe.com/)
 
 
 ## Installation
@@ -25,4 +26,4 @@ $ pip install requests
 ## Contributing
 * Check any open issues or open a new issue to start discussions about your ideas of features and/or bugs
 * Fork the repository, make changes, and send pull requests
-* And of course add yourself to the contributors  table
+* And of course add yourself to the contributors table
