@@ -4,7 +4,7 @@ Download Instagram images as a bulk from any user who is **public**.
 
 
 USE A VPN WHILE DOWNLOADING OR ELSE **NOT ALL** OF THE IMAGES WILL DOWNLOAD.                                                   
-RECOMENDED VPN ---> [Windscribe](https://windscribe.com/)
+RECOMENDED VPN ---> [Windscribe](https://windscribe.com/?friend=10yrk8b4)
 
 
 ## Installation
