@@ -9,7 +9,7 @@ try:
 except ImportError:
   import Tkinter as tkinter
 
-__version__ = "v.0.2.6"
+__version__ = "v.0.2.7"
 
 window = tkinter.Tk()
 
