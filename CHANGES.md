@@ -1,5 +1,8 @@
 # Changelog
 
+### Version 0.2.7 - 2018-30-01
+* Removed single image downloading function
+
 ### Version 0.2.6 - 2018-03-01
 * Added feature to download a single post
 
