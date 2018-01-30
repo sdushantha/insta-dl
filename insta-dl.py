@@ -13,52 +13,7 @@ __version__ = "v.0.2.6"
 
 window = tkinter.Tk()
 
-
-def download_single(url):
-    url = url.split("?")[0] + "media"
-
-    error = 1
-    
-    # Some sort of magic happens here
-    while error:
-      try:
-        req = urllib.request.urlopen(url)
-        error -=1
-      except:
-        print("\033[91mInvalid url!\033[0m")
-        return None
-
-    file_url = req.geturl()
-    
-    # Instagram uses [p]ixle or [s]ize
-    file_url = file_url.replace("p320x320","p1080x1080")
-    file_url = file_url.replace("s320x320","s1080x1080")
-
-    file_name = file_url.split("/")[-1]
-
-    folder_name = "single_image"
-    path = folder_name + "/" + file_name
-
-    try:
-        os.makedirs(folder_name)
-
-    except:
-        pass
-    
-    try:
-      urllib.request.urlretrieve(file_url, path)
-      print("Downloaded: "+path)
-
-    except:
-      try:
-          urllib.urlretrieve(file_url, path)
-          print("Downloaded: "+path)
-
-      except:
-          print("\033[91mUnknown error occurred!\033[0m")
-
-
-def download_bulk(username):
+def download(username):
   request_url = "https://www.instagram.com/" + username + "?__a=1"
   more_available = True
   end_cursors = []
@@ -122,17 +77,8 @@ def download_bulk(username):
 
 
 def action():
-  download_type = ""
-  home_url = "https://"
+  download(entry.get())
 
-  if home_url in entry.get():
-      download_type = "url"
-
-  if download_type != "url":
-      download_bulk(entry.get())
-
-  else:
-      download_single(entry.get())
 
 # Make folder with given username
 def make_folder(username):
@@ -141,6 +87,8 @@ def make_folder(username):
   except OSError:
     os.system("rm -rf " + username)
     os.makedirs(username)
+
+
 
 # Building the UI
 window.configure(background="grey90")
