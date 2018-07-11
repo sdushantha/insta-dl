@@ -1,7 +1,6 @@
 # ![image](https://user-images.githubusercontent.com/27065646/31065811-6dd88f9c-a748-11e7-9d57-2e0ae062f413.jpg) insta-dl
 
-**Ive stopped making changes to the source code myself, because Im spending to much time on it. But I will be accepting PRs.**
-
+**insta-dl has stopped working. Instagram keeps on changing their JSON format and it is too hard to keep up with their changes.So I have stopped working on this but I will be accepting PRs.**
 
 Download Instagram images as a bulk from any user who is **public**.
 
